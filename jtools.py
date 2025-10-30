@@ -259,7 +259,7 @@ async def _cmd_upload_vids(args, cfg):
 
     # Upload remaining files individually
     for file in standalone_files:
-        cmd = ["telegram-upload", "--delete"]
+        cmd = ["telegram-upload", "-d"]
         if args.extra_args:
             cmd.extend(args.extra_args)
         cmd.append(str(file))
